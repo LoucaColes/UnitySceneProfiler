@@ -148,16 +148,27 @@ public class CustomProfiler : EditorWindow
 
         EditorGUILayout.Space();
 
-        m_dataFilter = (DataFilter)EditorGUILayout.EnumPopup("Data Filter: ", m_dataFilter);
+        m_displayBools.m_displayFilter = EditorGUILayout.Foldout(m_displayBools.m_displayFilter, "Filter");
 
-        EditorGUILayout.HelpBox("Filter data based on components, set to null to see all.", MessageType.Info);
+        if (m_displayBools.m_displayFilter)
+        {
+            m_dataFilter = (DataFilter)EditorGUILayout.EnumPopup("Data Filter: ", m_dataFilter);
 
-        EditorGUILayout.Space();
+            EditorGUILayout.HelpBox("Filter data based on components, set to null to see all.", MessageType.Info);
 
-        m_objectSearch = EditorGUILayout.DelayedTextField("Object Search: ", m_objectSearch);
-        EditorGUILayout.HelpBox("Search for a specific object within the scene, set to null to see all.", MessageType.Info);
+            EditorGUILayout.Space();
+        }
 
-        EditorGUILayout.Space();
+        m_displayBools.m_displaySearch = EditorGUILayout.Foldout(m_displayBools.m_displaySearch, "Search");
+
+        if (m_displayBools.m_displaySearch)
+        {
+            m_objectSearch = EditorGUILayout.DelayedTextField("Object Search: ", m_objectSearch);
+            EditorGUILayout.HelpBox("Search for a specific object within the scene, set to null to see all.",
+                MessageType.Info);
+
+            EditorGUILayout.Space();
+        }
     }
 
     private void DisplayComponents()
@@ -310,6 +321,8 @@ public class CustomProfiler : EditorWindow
                         EditorGUILayout.ObjectField(m_dataSnapshot.m_lightObjects[i].m_light.name,
                             m_dataSnapshot.m_lightObjects[i].m_light, typeof(Light), true);
 
+                        ObjectPingFocus.DisplayPingButton(m_dataSnapshot.m_lightObjects[i].m_light.gameObject);
+
                         using (new EditorGUI.IndentLevelScope())
                         {
                             m_dataSnapshot.m_lightObjects[i].m_displayGeneric =
@@ -430,6 +443,8 @@ public class CustomProfiler : EditorWindow
                         EditorGUILayout.ObjectField(m_dataSnapshot.m_cameraObjects[i].m_camera.name, m_dataSnapshot.m_cameraObjects[i].m_camera,
                             typeof(Camera), true);
 
+                        ObjectPingFocus.DisplayPingButton(m_dataSnapshot.m_cameraObjects[i].m_camera.gameObject);
+
                         using (new EditorGUI.IndentLevelScope())
                         {
                             m_dataSnapshot.m_cameraObjects[i].m_displayData = EditorGUILayout.Foldout(m_dataSnapshot.m_cameraObjects[i].m_displayData,
@@ -513,6 +528,8 @@ public class CustomProfiler : EditorWindow
                             m_dataSnapshot.m_meshObjects[i].m_meshFilter,
                             typeof(MeshFilter), true);
 
+                        ObjectPingFocus.DisplayPingButton(m_dataSnapshot.m_meshObjects[i].m_meshFilter.gameObject);
+
                         using (new EditorGUI.IndentLevelScope())
                         {
                             if (m_dataSnapshot.m_meshObjects[i].m_sharedMesh != null)
@@ -549,6 +566,8 @@ public class CustomProfiler : EditorWindow
                             m_dataSnapshot.m_meshRendererObjects[i].m_meshRenderer,
                             typeof(MeshRenderer), true);
 
+                        ObjectPingFocus.DisplayPingButton(m_dataSnapshot.m_meshRendererObjects[i].m_meshRenderer.gameObject);
+
                         using (new EditorGUI.IndentLevelScope())
                         {
                             m_dataSnapshot.m_meshRendererObjects[i].m_displayMeshRendererLightingData = EditorGUILayout.Foldout(
@@ -571,6 +590,7 @@ public class CustomProfiler : EditorWindow
                             EditorGUILayout.Toggle("Dynamic Occluded: ",
                                 m_dataSnapshot.m_meshRendererObjects[i].m_meshRenderer.allowOcclusionWhenDynamic);
                         }
+                        EditorGUILayout.Space();
                     }
                 }
             }
@@ -590,6 +610,19 @@ public class CustomProfiler : EditorWindow
         {
             newDataSnapshotConverted.m_cameraObjectData.Add(DataParser.ConvertCameraObject(ref m_dataSnapshot.m_cameraObjects[index].m_camera));
         }
+
+        newDataSnapshotConverted.m_meshFilterObjectData = new List<MeshFilterObjectData>();
+        for (int index = 0; index < m_dataSnapshot.m_meshObjects.Count; index++)
+        {
+            newDataSnapshotConverted.m_meshFilterObjectData.Add(DataParser.ConvertMeshFilterObject(ref m_dataSnapshot.m_meshObjects[index].m_meshFilter));
+        }
+
+        newDataSnapshotConverted.m_meshRendererObjectData = new List<MeshRendererObjectData>();
+        for (int index = 0; index < m_dataSnapshot.m_meshRendererObjects.Count; index++)
+        {
+            newDataSnapshotConverted.m_meshRendererObjectData.Add(DataParser.ConvertMeshRendererObject(ref m_dataSnapshot.m_meshRendererObjects[index].m_meshRenderer));
+        }
+
         string json = JsonUtility.ToJson(newDataSnapshotConverted, true);
 
         // Create the full file path
@@ -603,6 +636,8 @@ public class CustomProfiler : EditorWindow
 public class DisplayBools
 {
     public bool m_displayConfig = false;
+    public bool m_displayFilter = true;
+    public bool m_displaySearch = true;
     public bool m_displayGeneral = false;
     public bool m_displayLights = false;
     public bool m_displayCameras = false;

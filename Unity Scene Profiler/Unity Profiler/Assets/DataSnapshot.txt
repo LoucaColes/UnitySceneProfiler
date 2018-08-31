@@ -89,6 +89,27 @@
             "m_tag": "Untagged",
             "m_layer": 0,
             "m_position": {
+                "x": -5.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        },
+        {
+            "m_name": "Cube",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
                 "x": 0.0,
                 "y": 0.0,
                 "z": 0.0
@@ -148,6 +169,27 @@
             "m_parentObject": "Null"
         },
         {
+            "m_name": "Cube (2)",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Cube"
+        },
+        {
             "m_name": "Area Light",
             "m_tag": "Untagged",
             "m_layer": 0,
@@ -174,6 +216,48 @@
             "m_layer": 0,
             "m_position": {
                 "x": 15.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        },
+        {
+            "m_name": "Cube (3)",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Cube (2)"
+        },
+        {
+            "m_name": "Cube (1)",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 0.0,
                 "y": 0.0,
                 "z": 0.0
             },
@@ -222,38 +306,506 @@
             "m_msaa": true,
             "m_dynamicResolution": false,
             "m_targetDisplay": 0
+        }
+    ],
+    "m_meshFilterObjectData": [
+        {
+            "m_name": "Sphere",
+            "m_sharedMeshData": {
+                "m_bounds": {
+                    "m_Center": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "m_Extent": {
+                        "x": 0.5,
+                        "y": 0.5,
+                        "z": 0.5
+                    }
+                },
+                "m_vertexColourCount": 0,
+                "m_normalsCount": 515,
+                "m_tangentsCount": 515,
+                "m_trianglesCount": 2304,
+                "m_verticesCount": 515,
+                "m_subMeshCount": 1
+            }
         },
         {
-            "m_name": "Main Camera",
-            "m_clearflag": "Skybox",
-            "m_backgroundColour": {
-                "r": 0.1921568661928177,
-                "g": 0.3019607961177826,
-                "b": 0.4745098054409027,
-                "a": 0.0
+            "m_name": "Cube",
+            "m_sharedMeshData": {
+                "m_bounds": {
+                    "m_Center": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "m_Extent": {
+                        "x": 0.5,
+                        "y": 0.5,
+                        "z": 0.5
+                    }
+                },
+                "m_vertexColourCount": 0,
+                "m_normalsCount": 24,
+                "m_tangentsCount": 24,
+                "m_trianglesCount": 36,
+                "m_verticesCount": 24,
+                "m_subMeshCount": 1
+            }
+        },
+        {
+            "m_name": "Cube",
+            "m_sharedMeshData": {
+                "m_bounds": {
+                    "m_Center": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "m_Extent": {
+                        "x": 0.5,
+                        "y": 0.5,
+                        "z": 0.5
+                    }
+                },
+                "m_vertexColourCount": 0,
+                "m_normalsCount": 24,
+                "m_tangentsCount": 24,
+                "m_trianglesCount": 36,
+                "m_verticesCount": 24,
+                "m_subMeshCount": 1
+            }
+        },
+        {
+            "m_name": "Capsule",
+            "m_sharedMeshData": {
+                "m_bounds": {
+                    "m_Center": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "m_Extent": {
+                        "x": 0.5,
+                        "y": 1.0,
+                        "z": 0.5
+                    }
+                },
+                "m_vertexColourCount": 0,
+                "m_normalsCount": 550,
+                "m_tangentsCount": 550,
+                "m_trianglesCount": 2496,
+                "m_verticesCount": 550,
+                "m_subMeshCount": 1
+            }
+        },
+        {
+            "m_name": "Cube (2)",
+            "m_sharedMeshData": {
+                "m_bounds": {
+                    "m_Center": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "m_Extent": {
+                        "x": 0.5,
+                        "y": 0.5,
+                        "z": 0.5
+                    }
+                },
+                "m_vertexColourCount": 0,
+                "m_normalsCount": 24,
+                "m_tangentsCount": 24,
+                "m_trianglesCount": 36,
+                "m_verticesCount": 24,
+                "m_subMeshCount": 1
+            }
+        },
+        {
+            "m_name": "Cylinder",
+            "m_sharedMeshData": {
+                "m_bounds": {
+                    "m_Center": {
+                        "x": 5.960464477539063e-8,
+                        "y": 0.0,
+                        "z": -8.940696716308594e-8
+                    },
+                    "m_Extent": {
+                        "x": 0.5000000596046448,
+                        "y": 1.0,
+                        "z": 0.5000001192092896
+                    }
+                },
+                "m_vertexColourCount": 0,
+                "m_normalsCount": 88,
+                "m_tangentsCount": 88,
+                "m_trianglesCount": 240,
+                "m_verticesCount": 88,
+                "m_subMeshCount": 1
+            }
+        },
+        {
+            "m_name": "Cube (3)",
+            "m_sharedMeshData": {
+                "m_bounds": {
+                    "m_Center": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "m_Extent": {
+                        "x": 0.5,
+                        "y": 0.5,
+                        "z": 0.5
+                    }
+                },
+                "m_vertexColourCount": 0,
+                "m_normalsCount": 24,
+                "m_tangentsCount": 24,
+                "m_trianglesCount": 36,
+                "m_verticesCount": 24,
+                "m_subMeshCount": 1
+            }
+        },
+        {
+            "m_name": "Cube (1)",
+            "m_sharedMeshData": {
+                "m_bounds": {
+                    "m_Center": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "m_Extent": {
+                        "x": 0.5,
+                        "y": 0.5,
+                        "z": 0.5
+                    }
+                },
+                "m_vertexColourCount": 0,
+                "m_normalsCount": 24,
+                "m_tangentsCount": 24,
+                "m_trianglesCount": 36,
+                "m_verticesCount": 24,
+                "m_subMeshCount": 1
+            }
+        }
+    ],
+    "m_meshRendererObjectData": [
+        {
+            "m_name": "Sphere",
+            "m_lightingObjectData": {
+                "m_lightProbe": "BlendProbes",
+                "m_reflectionProbe": "BlendProbes",
+                "m_anchorOverride": "Null",
+                "m_castShadow": "On",
+                "m_recieveShadow": true,
+                "m_motionVectors": "Object"
             },
-            "m_cullingMask": -1,
-            "m_perspective": true,
-            "m_fov": 60.0,
-            "m_orthographic": false,
-            "m_orthographicSize": 5.0,
-            "m_clippingPlaneNear": 0.30000001192092898,
-            "m_clippingPlaneFar": 1000.0,
-            "m_viewportRect": {
-                "serializedVersion": "2",
-                "x": 0.0,
-                "y": 0.0,
-                "width": 1.0,
-                "height": 1.0
+            "m_materialCount": 1,
+            "m_materialsObjectData": [
+                {
+                    "m_name": "SolidGreen (Instance) (Instance) (Instance)",
+                    "m_colour": {
+                        "r": 0.09620404243469238,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "m_doubleSidedGI": false,
+                    "m_enableInstancing": false,
+                    "m_globalIlluminationFlag": "EmissiveIsBlack",
+                    "m_mainTexture": "Null",
+                    "m_mainTextureOffset": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "m_mainTextureScale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "m_passCount": 5,
+                    "m_renderQueue": 2000,
+                    "m_shader": "Standard"
+                }
+            ],
+            "m_dynamicOcclusion": true
+        },
+        {
+            "m_name": "Cube",
+            "m_lightingObjectData": {
+                "m_lightProbe": "BlendProbes",
+                "m_reflectionProbe": "BlendProbes",
+                "m_anchorOverride": "Null",
+                "m_castShadow": "On",
+                "m_recieveShadow": true,
+                "m_motionVectors": "Object"
             },
-            "m_depth": -1.0,
-            "m_renderingPath": "UsePlayerSettings",
-            "m_texture": "Null",
-            "m_occlusionCulling": true,
-            "m_hdr": true,
-            "m_msaa": true,
-            "m_dynamicResolution": false,
-            "m_targetDisplay": 0
+            "m_materialCount": 1,
+            "m_materialsObjectData": [
+                {
+                    "m_name": "Default-Material (Instance) (Instance) (Instance)",
+                    "m_colour": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "m_doubleSidedGI": false,
+                    "m_enableInstancing": false,
+                    "m_globalIlluminationFlag": "RealtimeEmissive, EmissiveIsBlack",
+                    "m_mainTexture": "Null",
+                    "m_mainTextureOffset": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "m_mainTextureScale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "m_passCount": 5,
+                    "m_renderQueue": 2000,
+                    "m_shader": "Standard"
+                }
+            ],
+            "m_dynamicOcclusion": true
+        },
+        {
+            "m_name": "Cube",
+            "m_lightingObjectData": {
+                "m_lightProbe": "BlendProbes",
+                "m_reflectionProbe": "BlendProbes",
+                "m_anchorOverride": "Null",
+                "m_castShadow": "On",
+                "m_recieveShadow": true,
+                "m_motionVectors": "Object"
+            },
+            "m_materialCount": 1,
+            "m_materialsObjectData": [
+                {
+                    "m_name": "Default-Material (Instance) (Instance) (Instance) (Instance)",
+                    "m_colour": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "m_doubleSidedGI": false,
+                    "m_enableInstancing": false,
+                    "m_globalIlluminationFlag": "RealtimeEmissive, EmissiveIsBlack",
+                    "m_mainTexture": "Null",
+                    "m_mainTextureOffset": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "m_mainTextureScale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "m_passCount": 5,
+                    "m_renderQueue": 2000,
+                    "m_shader": "Standard"
+                }
+            ],
+            "m_dynamicOcclusion": true
+        },
+        {
+            "m_name": "Capsule",
+            "m_lightingObjectData": {
+                "m_lightProbe": "BlendProbes",
+                "m_reflectionProbe": "BlendProbes",
+                "m_anchorOverride": "Null",
+                "m_castShadow": "On",
+                "m_recieveShadow": true,
+                "m_motionVectors": "Object"
+            },
+            "m_materialCount": 1,
+            "m_materialsObjectData": [
+                {
+                    "m_name": "Default-Material (Instance) (Instance) (Instance)",
+                    "m_colour": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "m_doubleSidedGI": false,
+                    "m_enableInstancing": false,
+                    "m_globalIlluminationFlag": "RealtimeEmissive, EmissiveIsBlack",
+                    "m_mainTexture": "Null",
+                    "m_mainTextureOffset": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "m_mainTextureScale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "m_passCount": 5,
+                    "m_renderQueue": 2000,
+                    "m_shader": "Standard"
+                }
+            ],
+            "m_dynamicOcclusion": true
+        },
+        {
+            "m_name": "Cube (2)",
+            "m_lightingObjectData": {
+                "m_lightProbe": "BlendProbes",
+                "m_reflectionProbe": "BlendProbes",
+                "m_anchorOverride": "Null",
+                "m_castShadow": "On",
+                "m_recieveShadow": true,
+                "m_motionVectors": "Object"
+            },
+            "m_materialCount": 1,
+            "m_materialsObjectData": [
+                {
+                    "m_name": "Default-Material (Instance) (Instance) (Instance) (Instance) (Instance)",
+                    "m_colour": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "m_doubleSidedGI": false,
+                    "m_enableInstancing": false,
+                    "m_globalIlluminationFlag": "RealtimeEmissive, EmissiveIsBlack",
+                    "m_mainTexture": "Null",
+                    "m_mainTextureOffset": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "m_mainTextureScale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "m_passCount": 5,
+                    "m_renderQueue": 2000,
+                    "m_shader": "Standard"
+                }
+            ],
+            "m_dynamicOcclusion": true
+        },
+        {
+            "m_name": "Cylinder",
+            "m_lightingObjectData": {
+                "m_lightProbe": "BlendProbes",
+                "m_reflectionProbe": "BlendProbes",
+                "m_anchorOverride": "Null",
+                "m_castShadow": "On",
+                "m_recieveShadow": true,
+                "m_motionVectors": "Object"
+            },
+            "m_materialCount": 1,
+            "m_materialsObjectData": [
+                {
+                    "m_name": "Default-Material (Instance) (Instance) (Instance)",
+                    "m_colour": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "m_doubleSidedGI": false,
+                    "m_enableInstancing": false,
+                    "m_globalIlluminationFlag": "RealtimeEmissive, EmissiveIsBlack",
+                    "m_mainTexture": "Null",
+                    "m_mainTextureOffset": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "m_mainTextureScale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "m_passCount": 5,
+                    "m_renderQueue": 2000,
+                    "m_shader": "Standard"
+                }
+            ],
+            "m_dynamicOcclusion": true
+        },
+        {
+            "m_name": "Cube (3)",
+            "m_lightingObjectData": {
+                "m_lightProbe": "BlendProbes",
+                "m_reflectionProbe": "BlendProbes",
+                "m_anchorOverride": "Null",
+                "m_castShadow": "On",
+                "m_recieveShadow": true,
+                "m_motionVectors": "Object"
+            },
+            "m_materialCount": 1,
+            "m_materialsObjectData": [
+                {
+                    "m_name": "Default-Material (Instance) (Instance) (Instance) (Instance) (Instance)",
+                    "m_colour": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "m_doubleSidedGI": false,
+                    "m_enableInstancing": false,
+                    "m_globalIlluminationFlag": "RealtimeEmissive, EmissiveIsBlack",
+                    "m_mainTexture": "Null",
+                    "m_mainTextureOffset": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "m_mainTextureScale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "m_passCount": 5,
+                    "m_renderQueue": 2000,
+                    "m_shader": "Standard"
+                }
+            ],
+            "m_dynamicOcclusion": true
+        },
+        {
+            "m_name": "Cube (1)",
+            "m_lightingObjectData": {
+                "m_lightProbe": "BlendProbes",
+                "m_reflectionProbe": "BlendProbes",
+                "m_anchorOverride": "Null",
+                "m_castShadow": "On",
+                "m_recieveShadow": true,
+                "m_motionVectors": "Object"
+            },
+            "m_materialCount": 1,
+            "m_materialsObjectData": [
+                {
+                    "m_name": "Default-Material (Instance) (Instance) (Instance) (Instance) (Instance)",
+                    "m_colour": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "m_doubleSidedGI": false,
+                    "m_enableInstancing": false,
+                    "m_globalIlluminationFlag": "RealtimeEmissive, EmissiveIsBlack",
+                    "m_mainTexture": "Null",
+                    "m_mainTextureOffset": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "m_mainTextureScale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "m_passCount": 5,
+                    "m_renderQueue": 2000,
+                    "m_shader": "Standard"
+                }
+            ],
+            "m_dynamicOcclusion": true
         }
     ]
 }

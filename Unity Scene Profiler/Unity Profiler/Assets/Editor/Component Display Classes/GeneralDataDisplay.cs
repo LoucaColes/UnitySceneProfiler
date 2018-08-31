@@ -7,6 +7,10 @@ public static class GeneralDataDisplay : object
 {
     public static void DisplayObject(GameObject _object)
     {
+        ObjectPingFocus.DisplayPingButton(_object);
+
+        EditorGUILayout.Space();
+
         EditorGUILayout.Toggle("Active: ", _object.activeSelf);
         EditorGUILayout.LabelField("Tag: ", _object.tag);
         EditorGUILayout.LabelField("Layer", _object.layer.ToString());

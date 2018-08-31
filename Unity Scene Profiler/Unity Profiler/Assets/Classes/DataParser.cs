@@ -60,6 +60,77 @@ public static class DataParser
 
         return newCameraObjectData;
     }
+
+    public static MeshFilterObjectData ConvertMeshFilterObject(ref MeshFilter _meshFilter)
+    {
+        MeshFilterObjectData newMeshFilterObjectData = new MeshFilterObjectData();
+
+        newMeshFilterObjectData.m_name = _meshFilter.name;
+        newMeshFilterObjectData.m_sharedMeshData = new MeshObjectData();
+        newMeshFilterObjectData.m_sharedMeshData.m_bounds = _meshFilter.sharedMesh.bounds;
+        newMeshFilterObjectData.m_sharedMeshData.m_vertexColourCount = _meshFilter.sharedMesh.colors.Length;
+        newMeshFilterObjectData.m_sharedMeshData.m_normalsCount = _meshFilter.sharedMesh.normals.Length;
+        newMeshFilterObjectData.m_sharedMeshData.m_tangentsCount = _meshFilter.sharedMesh.tangents.Length;
+        newMeshFilterObjectData.m_sharedMeshData.m_trianglesCount = _meshFilter.sharedMesh.triangles.Length;
+        newMeshFilterObjectData.m_sharedMeshData.m_verticesCount = _meshFilter.sharedMesh.vertices.Length;
+        newMeshFilterObjectData.m_sharedMeshData.m_subMeshCount = _meshFilter.sharedMesh.subMeshCount;
+
+        return newMeshFilterObjectData;
+    }
+
+    public static MeshRendererObjectData ConvertMeshRendererObject(ref MeshRenderer _meshRenderer)
+    {
+        MeshRendererObjectData newMeshRendererObjectData = new MeshRendererObjectData();
+
+        newMeshRendererObjectData.m_name = _meshRenderer.name;
+
+        newMeshRendererObjectData.m_lightingObjectData = new LightingObjectData();
+        newMeshRendererObjectData.m_lightingObjectData.m_lightProbe = _meshRenderer.lightProbeUsage.ToString();
+        newMeshRendererObjectData.m_lightingObjectData.m_reflectionProbe = _meshRenderer.reflectionProbeUsage.ToString();
+        if (_meshRenderer.probeAnchor != null)
+        {
+            newMeshRendererObjectData.m_lightingObjectData.m_anchorOverride = _meshRenderer.probeAnchor.name;
+        }
+        else
+        {
+            newMeshRendererObjectData.m_lightingObjectData.m_anchorOverride = "Null";
+        }
+        newMeshRendererObjectData.m_lightingObjectData.m_castShadow = _meshRenderer.shadowCastingMode.ToString();
+        newMeshRendererObjectData.m_lightingObjectData.m_recieveShadow = _meshRenderer.receiveShadows;
+        newMeshRendererObjectData.m_lightingObjectData.m_motionVectors = _meshRenderer.motionVectorGenerationMode.ToString();
+
+        newMeshRendererObjectData.m_materialCount = _meshRenderer.sharedMaterials.Length;
+
+        newMeshRendererObjectData.m_materialsObjectData = new List<MaterialObjectData>();
+        for (int index = 0; index < _meshRenderer.sharedMaterials.Length; index++)
+        {
+            MaterialObjectData newMaterialObjectData = new MaterialObjectData();
+            newMaterialObjectData.m_name = _meshRenderer.sharedMaterials[index].name;
+            newMaterialObjectData.m_colour = _meshRenderer.sharedMaterials[index].color;
+            newMaterialObjectData.m_doubleSidedGI = _meshRenderer.sharedMaterials[index].doubleSidedGI;
+            newMaterialObjectData.m_enableInstancing = _meshRenderer.sharedMaterials[index].enableInstancing;
+            newMaterialObjectData.m_globalIlluminationFlag =
+                _meshRenderer.sharedMaterials[index].globalIlluminationFlags.ToString();
+            if (_meshRenderer.sharedMaterials[index].mainTexture != null)
+            {
+                newMaterialObjectData.m_mainTexture = _meshRenderer.sharedMaterials[index].mainTexture.name;
+            }
+            else
+            {
+                newMaterialObjectData.m_mainTexture = "Null";
+            }
+            newMaterialObjectData.m_mainTextureOffset = _meshRenderer.sharedMaterials[index].mainTextureOffset;
+            newMaterialObjectData.m_mainTextureScale = _meshRenderer.sharedMaterials[index].mainTextureScale;
+            newMaterialObjectData.m_passCount = _meshRenderer.sharedMaterials[index].passCount;
+            newMaterialObjectData.m_renderQueue = _meshRenderer.sharedMaterials[index].renderQueue;
+            newMaterialObjectData.m_shader = _meshRenderer.sharedMaterials[index].shader.name;
+            newMeshRendererObjectData.m_materialsObjectData.Add(newMaterialObjectData);
+        }
+
+        newMeshRendererObjectData.m_dynamicOcclusion = _meshRenderer.allowOcclusionWhenDynamic;
+
+        return newMeshRendererObjectData;
+    }
 }
 
 [Serializable]
@@ -67,6 +138,8 @@ public class DataSnapshotConverted
 {
     public List<GameObjectData> m_gameObjectData = new List<GameObjectData>();
     public List<CameraObjectData> m_cameraObjectData = new List<CameraObjectData>();
+    public List<MeshFilterObjectData> m_meshFilterObjectData = new List<MeshFilterObjectData>();
+    public List<MeshRendererObjectData> m_meshRendererObjectData = new List<MeshRendererObjectData>();
 }
 
 [Serializable]
@@ -122,4 +195,41 @@ public class MeshObjectData
     public int m_trianglesCount;
     public int m_verticesCount;
     public int m_subMeshCount;
+}
+
+[Serializable]
+public class MeshRendererObjectData
+{
+    public string m_name;
+    public LightingObjectData m_lightingObjectData;
+    public int m_materialCount;
+    public List<MaterialObjectData> m_materialsObjectData;
+    public bool m_dynamicOcclusion;
+}
+
+[Serializable]
+public class LightingObjectData
+{
+    public string m_lightProbe;
+    public string m_reflectionProbe;
+    public string m_anchorOverride;
+    public string m_castShadow;
+    public bool m_recieveShadow;
+    public string m_motionVectors;
+}
+
+[Serializable]
+public class MaterialObjectData
+{
+    public string m_name;
+    public Color m_colour;
+    public bool m_doubleSidedGI;
+    public bool m_enableInstancing;
+    public string m_globalIlluminationFlag;
+    public string m_mainTexture;
+    public Vector2 m_mainTextureOffset;
+    public Vector2 m_mainTextureScale;
+    public int m_passCount;
+    public int m_renderQueue;
+    public string m_shader;
 }
