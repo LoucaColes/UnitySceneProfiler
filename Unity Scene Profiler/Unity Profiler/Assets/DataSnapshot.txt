@@ -1,0 +1,259 @@
+{
+    "m_gameObjectData": [
+        {
+            "m_name": "Point Light",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        },
+        {
+            "m_name": "Sphere",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 5.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        },
+        {
+            "m_name": "Directional Light",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 0.0,
+                "y": 3.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 50.0,
+                "y": 330.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        },
+        {
+            "m_name": "Main Camera",
+            "m_tag": "MainCamera",
+            "m_layer": 0,
+            "m_position": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": -10.0
+            },
+            "m_rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        },
+        {
+            "m_name": "Cube",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        },
+        {
+            "m_name": "Spot Light",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 90.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        },
+        {
+            "m_name": "Capsule",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 10.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        },
+        {
+            "m_name": "Area Light",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 90.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        },
+        {
+            "m_name": "Cylinder",
+            "m_tag": "Untagged",
+            "m_layer": 0,
+            "m_position": {
+                "x": 15.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "m_scale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "m_parentObject": "Null"
+        }
+    ],
+    "m_cameraObjectData": [
+        {
+            "m_name": "Main Camera",
+            "m_clearflag": "Skybox",
+            "m_backgroundColour": {
+                "r": 0.1921568661928177,
+                "g": 0.3019607961177826,
+                "b": 0.4745098054409027,
+                "a": 0.0
+            },
+            "m_cullingMask": -1,
+            "m_perspective": true,
+            "m_fov": 60.0,
+            "m_orthographic": false,
+            "m_orthographicSize": 5.0,
+            "m_clippingPlaneNear": 0.30000001192092898,
+            "m_clippingPlaneFar": 1000.0,
+            "m_viewportRect": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1.0,
+                "height": 1.0
+            },
+            "m_depth": -1.0,
+            "m_renderingPath": "UsePlayerSettings",
+            "m_texture": "Null",
+            "m_occlusionCulling": true,
+            "m_hdr": true,
+            "m_msaa": true,
+            "m_dynamicResolution": false,
+            "m_targetDisplay": 0
+        },
+        {
+            "m_name": "Main Camera",
+            "m_clearflag": "Skybox",
+            "m_backgroundColour": {
+                "r": 0.1921568661928177,
+                "g": 0.3019607961177826,
+                "b": 0.4745098054409027,
+                "a": 0.0
+            },
+            "m_cullingMask": -1,
+            "m_perspective": true,
+            "m_fov": 60.0,
+            "m_orthographic": false,
+            "m_orthographicSize": 5.0,
+            "m_clippingPlaneNear": 0.30000001192092898,
+            "m_clippingPlaneFar": 1000.0,
+            "m_viewportRect": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1.0,
+                "height": 1.0
+            },
+            "m_depth": -1.0,
+            "m_renderingPath": "UsePlayerSettings",
+            "m_texture": "Null",
+            "m_occlusionCulling": true,
+            "m_hdr": true,
+            "m_msaa": true,
+            "m_dynamicResolution": false,
+            "m_targetDisplay": 0
+        }
+    ]
+}
