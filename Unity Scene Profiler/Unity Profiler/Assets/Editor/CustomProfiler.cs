@@ -287,9 +287,13 @@ public class CustomProfiler : EditorWindow
         if (m_dataFilter == DataFilter.Null || m_dataFilter == DataFilter.Mesh)
         {
             MeshFilter tempMeshFilter = _object.GetComponent<MeshFilter>();
-            if (tempMeshFilter != null)
+            if (tempMeshFilter != null && m_dataConfig != null)
             {
-                MeshDisplay.DisplayMeshFilterData(tempMeshFilter);
+                MeshDisplay.DisplayMeshFilterData(tempMeshFilter, m_dataConfig.m_meshDataLimit);
+            }
+            else if (tempMeshFilter != null && m_dataConfig == null)
+            {
+                MeshDisplay.DisplayMeshFilterData(tempMeshFilter, null);
             }
         }
 
@@ -538,9 +542,13 @@ public class CustomProfiler : EditorWindow
                                     EditorGUILayout.Foldout(m_dataSnapshot.m_meshObjects[i].m_displaySharedMeshData,
                                         "Display Shared Mesh Data");
 
-                                if (m_dataSnapshot.m_meshObjects[i].m_displaySharedMeshData)
+                                if (m_dataSnapshot.m_meshObjects[i].m_displaySharedMeshData && m_dataConfig != null)
                                 {
-                                    MeshDisplay.DisplayMeshData(m_dataSnapshot.m_meshObjects[i].m_sharedMesh);
+                                    MeshDisplay.DisplayMeshData(m_dataSnapshot.m_meshObjects[i].m_sharedMesh, m_dataConfig.m_meshDataLimit);
+                                }
+                                else if (m_dataSnapshot.m_meshObjects[i].m_displaySharedMeshData && m_dataConfig == null)
+                                {
+                                    MeshDisplay.DisplayMeshData(m_dataSnapshot.m_meshObjects[i].m_sharedMesh, null);
                                 }
                             }
                         }

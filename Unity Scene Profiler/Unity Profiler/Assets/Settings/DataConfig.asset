@@ -11,8 +11,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6ea2dbc6249ab47aee94c557796f84, type: 3}
   m_Name: DataConfig
   m_EditorClassIdentifier: 
+  m_meshDataLimit:
+    m_vertexColourCountWarningLimit: 5
+    m_warningMessageVertexColourCount: 
+    m_vertexColourCountErrorLimit: 10
+    m_errorMessageVertexColourCount: 
+    m_normalsCountWarningLimit: 0
+    m_warningMessageNormalsCount: 
+    m_normalsCountErrorLimit: 0
+    m_errorMessageNormalsCount: 
+    m_tangentsCountWarningLimit: 0
+    m_warningMessageTangentsCount: 
+    m_tangentsCountErrorLimit: 0
+    m_errorMessageTangentsCount: 
+    m_trianglesCountWarningLimit: 0
+    m_warningMessageTrianglesCount: 
+    m_trianglesCountErrorLimit: 0
+    m_errorMessageTrianglesCount: 
+    m_verticesCountWarningLimit: 0
+    m_warningMessageVerticesCount: 
+    m_verticesCountErrorLimit: 0
+    m_errorMessageVerticesCount: 
+    m_subMeshesCountWarningLimit: 0
+    m_warningMessageSubMeshesCount: 
+    m_subMeshesCountErrorLimit: 0
+    m_errorMessageSubMeshesCount: 
   m_cameraDataLimit:
     m_hdrAllowed: 0
-    m_errorMessageHDR: 
+    m_errorMessageHDR: HDR Not Allowed
     m_msaaAllowed: 0
     m_errorMessageMsaa: 
